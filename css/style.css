@@ -10,7 +10,7 @@ html{
 body{
     background: rgba(26, 11, 46, 1);
     font-family: 'Inter', sans-serif;
-    color: rgba(255, 255, 255, 1)
+    color: rgba(255, 255, 255, 0.7)
 }
 h1, h2, h3, h4, h5, h6 {
     color: rgba(255, 255, 255, 1);
@@ -24,7 +24,7 @@ h1{
 h2{
     font-size: 32px;
     font-weight: 700;
-    line-height: 32px;
+    line-height: 45px;
 }
 h3{
     font-size: 24px;
@@ -32,11 +32,11 @@ h3{
     line-height: 26px;
 }
 p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     font-family: inter, sans-serif;
-    line-height: 19px;
+    line-height: 24px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
 }
 a{
     color: rgba(255, 255, 255, 1); 
@@ -46,9 +46,7 @@ a{
     font-family: inter, sans-serif;
     transition: all 0.3s ease;
 }
-.color-green{
-    color: rgba(0, 255, 136, 1);
-}
+
 .btn {
     display: flex;
     flex-direction: row;
@@ -105,7 +103,9 @@ svg {
     justify-content: flex-start;
     gap: 16px;
 }
-
+.empty-space {
+    padding: 65px 0;
+}
 /*================
     Header Styles 
  =================*/
@@ -141,6 +141,7 @@ header .navigation-wrapper ul li a:hover {
     min-height: 75vh;
     display: flex;
     align-items: center;
+    padding: 50px 0;
 }
 .hero-inner {
     max-width: 550px;
@@ -153,7 +154,7 @@ header .navigation-wrapper ul li a:hover {
 .hero-circle {
     margin: auto;
     position: relative;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
 }
 .circle-gradient {
     position: relative;
@@ -345,3 +346,53 @@ header .navigation-wrapper ul li a:hover {
     margin: auto;
     text-align: center;
 }
+
+/*==================
+ About Section Styles
+ =================== */
+ .about-podcust{
+    padding: 50px 0 120px 0;
+ }
+ .about-content-wrapper h2 {
+    margin-bottom: 12px;
+}
+.empty-space .divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .1);
+}
+.about-content-wrapper {
+    text-align: center;
+    max-width: 730px;
+    margin: auto;
+}
+.our-listeners .inner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    justify-items: center;
+}
+.our-listeners .listener-item{
+    text-align: center;
+}
+.our-listeners .listener-item h2{
+    color: rgba(0, 255, 136, 1)
+}
+
+
+ /*==================
+ Why Choose Section Styles
+ =================== */
+
+ /*==================
+ Featured Episodes Section Styles
+ =================== */
+
+ /*==================
+ Meet Host Section Styles
+ =================== */
+
+ /*==================
+ Footer Section Styles
+ =================== */
