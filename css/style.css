@@ -384,7 +384,46 @@ header .navigation-wrapper ul li a:hover {
  /*==================
  Why Choose Section Styles
  =================== */
-
+.why-choose {
+    padding: 120px 0;
+    background: rgba(35, 14, 61, 1);
+}
+.why-choose .section-header h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.why-choose .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.col-2{
+    grid-column: span 2;
+}
+.col-1{
+    grid-column: span 1;
+}
+.row-1{
+    grid-row: span 1;
+}
+.row-2{
+    grid-row: span 2;
+}
+.why-choose .card-item {
+    border-radius: 40px;
+    background: rgba(53, 17, 101, 0.4);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    justify-content: center;
+    height: 100%;
+}
+.why-choose .card-item img {
+    width: auto;
+    height: 60px;
+}
  /*==================
  Featured Episodes Section Styles
  =================== */
