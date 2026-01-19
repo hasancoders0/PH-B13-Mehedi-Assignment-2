@@ -427,6 +427,33 @@ header .navigation-wrapper ul li a:hover {
  /*==================
  Featured Episodes Section Styles
  =================== */
+.featured-episodes {
+    padding: 120px 0;
+}
+.featured-episodes .section-header h2 {
+    margin-bottom: 24px;
+    text-align: center;
+}
+.featured-episodes .episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.featured-episodes .episode-card {
+    background: rgba(53, 17, 101, 0.4);
+    border-radius: 24px;
+    overflow: hidden;
+}
+.featured-episodes .youtube-video {
+    height: 220px;
+}
+.episode-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 
  /*==================
  Meet Host Section Styles
