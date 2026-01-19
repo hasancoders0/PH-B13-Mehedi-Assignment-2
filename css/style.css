@@ -46,7 +46,12 @@ a{
     font-family: inter, sans-serif;
     transition: all 0.3s ease;
 }
-
+button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
 .btn {
     display: flex;
     flex-direction: row;
@@ -111,6 +116,7 @@ svg {
  =================*/
 header {
     padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 header .inner-section {
     display: flex;
@@ -136,12 +142,12 @@ header .navigation-wrapper ul li a:hover {
  =================== */
 .hero-section {
     background-image: url('../images/hero-bg.png');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 75vh;
     display: flex;
     align-items: center;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 .hero-inner {
     max-width: 550px;
@@ -150,6 +156,7 @@ header .navigation-wrapper ul li a:hover {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    text-align: center;
 }
 .hero-circle {
     margin: auto;
@@ -376,7 +383,7 @@ header .navigation-wrapper ul li a:hover {
 .our-listeners .listener-item{
     text-align: center;
 }
-.our-listeners .listener-item h2{
+.our-listeners .listener-item h1{
     color: rgba(0, 255, 136, 1)
 }
 
@@ -419,6 +426,12 @@ header .navigation-wrapper ul li a:hover {
     gap: 16px;
     justify-content: center;
     height: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.why-choose .card-item:hover {
+    background: rgba(53, 17, 101, 0.8);
+    box-shadow: 0 0px 0px 2px rgba(145, 0, 248, 0.8);
 }
 .why-choose .card-item img {
     width: auto;
@@ -442,8 +455,15 @@ header .navigation-wrapper ul li a:hover {
 .featured-episodes .episode-card {
     background: rgba(53, 17, 101, 0.4);
     border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     overflow: hidden;
 }
+.featured-episodes .episode-card:hover {
+    background: rgba(53, 17, 101, 0.8);
+    box-shadow: 0 0px 0px 2px rgba(145, 0, 248, 0.8);
+}
+
 .featured-episodes .youtube-video {
     height: 220px;
 }
@@ -469,6 +489,10 @@ header .navigation-wrapper ul li a:hover {
     padding: 40px;
     margin: auto;
 }
+.meet-host h1 {
+    text-align: center;
+    margin-bottom: 2px;
+}
 .host-content-wrapper h2 {
     margin-bottom: 14px;
 }
@@ -488,6 +512,13 @@ header .navigation-wrapper ul li a:hover {
     align-content: center;
     align-items: center;
     justify-content: center;
+
+    transition: all 0.3s ease;
+}
+.host-content-wrapper li:hover {
+    background: rgba(145, 0, 248, 0.2);
+    border-color: transparent;
+    box-shadow: 0 0px 0px 2px rgba(145, 0, 248, 0.8);
 }
 .host-content-wrapper img {
     width: 20px;
@@ -501,6 +532,7 @@ header .navigation-wrapper ul li a:hover {
  =================== */
 .footer {
     background-image: url('../images/footer-bg.png');
+    background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -521,7 +553,8 @@ header .navigation-wrapper ul li a:hover {
 .footer-social-links ul {
     list-style: none;
     padding: 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -529,4 +562,194 @@ header .navigation-wrapper ul li a:hover {
 .footer-social-links ul li img{
  margin-bottom: -3px;
  padding-right: 4px;
+}
+@media (min-width: 992px) {
+   .hide-desktop {
+       display: none;
+   }
+}
+@media (max-width: 991px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+ /*==================
+ Mobile Responsive Styles
+ =================== */
+@media (max-width: 576px) {
+    /* global style */
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .empty-space {
+        padding: 35px 0;
+    }
+    /* Hero Section */
+.hero-section {
+    background-image: url('../images/mobile-hero-bg.png');
+    padding: 60px 0;
+}
+    .circle-gradient {
+        width: 200px;
+        height: 200px;
+    }
+    .circle-gradient img{
+        width: 60px;
+        height: auto;
+    }
+    .hero-section .indicator-text {
+        top: 10px;
+        right: 10px;
+    }
+    /* podcust */
+    .about-podcust {
+        padding: 50px 0 50px 0;
+    }
+    /* why choose */
+    .why-choose {
+        padding: 60px 0;
+    }
+    .why-choose .grid-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .col-2{
+        grid-column: span 1;
+    }
+    .col-1{
+        grid-column: span 1;
+    }
+    .row-1{
+        grid-row: span 1;
+    }
+    .row-2{
+        grid-row: span 1;
+    }
+    /* Listeners Section */
+    .our-listeners .inner-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+    /* Featured Episodes Section */
+    .featured-episodes {
+        padding: 60px 0;
+    }
+    .featured-episodes .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Meet Host Section */
+    .host-image-wrapper {
+    margin: auto;
+}
+    .host-content-wrapper {
+        text-align: center;
+    }
+    .host-content-wrapper ul {
+        justify-content: center;
+    }
+    .host-inner {
+        grid-template-columns: 1fr;
+    }
+    /* Footer section */
+    .footer {
+        background-image: url('../images/mobile-footer-bg.png');
+        padding: 60px 0;
+    }
+    .footer .footer-logo-wrapper img {
+        max-width: 220px;
+    }
+    .footer-social-links ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+}
+ /*==================
+ Tablet Responsive Styles
+ =================== */
+@media (min-width: 577px) and (max-width: 991px) {
+    /* global style */
+    h1{
+        font-size: 42px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    .empty-space {
+        padding: 40px 0;
+    }
+    /* Hero Section */
+.hero-section {
+    padding: 60px 0;
+}
+    .circle-gradient {
+        width: 250px;
+        height: 250px;
+    }
+    .circle-gradient img{
+        width: 70px;
+        height: auto;
+    }
+    .hero-section .indicator-text {
+        top: 10px;
+        right: 10px;
+    }
+    /* podcust */
+    .about-podcust {
+        padding: 50px 0 50px 0;
+    }
+    /* why choose */
+    .why-choose {
+        padding: 60px 0;
+    }
+    .why-choose .grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .col-2{
+        grid-column: span 1;
+    }
+    .col-1{
+        grid-column: span 1;
+    }
+    .row-1{
+        grid-row: span 1;
+    }
+    .row-2{
+        grid-row: span 1;
+    }
+    /* Listeners Section */
+    .our-listeners .inner-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+    /* Featured Episodes Section */
+    .featured-episodes {
+        padding: 60px 0;
+    }
+    .featured-episodes .episodes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Meet Host Section */
+    .host-image-wrapper {
+    margin: auto;
+}
+    /* Footer section */
+    .footer {
+        padding: 70px 0;
+    }
+    .footer .footer-logo-wrapper img {
+        max-width: 220px;
+    }
+    .footer-social-links ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
 }
