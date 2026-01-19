@@ -453,11 +453,48 @@ header .navigation-wrapper ul li a:hover {
     flex-direction: column;
     gap: 12px;
 }
-
+.episode-content .time img {
+    margin-bottom: -3px;
+}
 
  /*==================
  Meet Host Section Styles
  =================== */
+.host-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr auto);
+    gap: 24px;
+    background: rgba(35, 14, 61, 1);
+    border-radius: 40px;
+    padding: 40px;
+    margin: auto;
+}
+.host-content-wrapper h2 {
+    margin-bottom: 14px;
+}
+.host-content-wrapper ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 20px;
+    display: flex;
+    gap: 8px;
+}
+.host-content-wrapper li {
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.host-content-wrapper img {
+    width: 20px;
+    height: auto;
+    margin-bottom: -4px;
+    padding: 2px;
+}
 
  /*==================
  Footer Section Styles
